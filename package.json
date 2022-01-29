@@ -19,6 +19,7 @@
     "react-native-safe-area-context": "^3.3.2",
     "react-native-safe-area-view": "^1.1.1",
     "react-native-screens": "^3.10.2",
+    "react-native-sqlite-storage": "^6.0.1",
     "twrnc": "^2.3.0"
   },
   "devDependencies": {

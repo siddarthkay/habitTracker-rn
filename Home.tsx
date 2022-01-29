@@ -1,3 +1,5 @@
+// noinspection TypeScriptCheckImport
+
 import React, {useState, useEffect} from 'react';
 import {
   Text,
@@ -11,11 +13,30 @@ import tw from 'twrnc';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/RootStackParamList';
 
+import {openDatabase} from 'react-native-sqlite-storage';
+
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+function errorCB(err: string) {
+  console.log('SQL Error: ' + err);
+}
+
+function openCB() {
+  console.log('Database OPENED');
+}
 
 const Home = ({navigation}: Props) => {
   const [habitText, setHabitText] = useState('');
   const [habitList, setHabitList] = useState([]);
+
+  const db = openDatabase(
+    'habitTracker.db',
+    '1.0',
+    'Test Database',
+    200000,
+    openCB,
+    errorCB,
+  );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -32,6 +53,10 @@ const Home = ({navigation}: Props) => {
     fetchHabitsFromStore();
   }, []);
 
+  useEffect(() => {
+
+  }, []);
+
   function addHabitToList() {
     let existingHabitList = [...habitList];
     // @ts-ignore
@@ -39,6 +64,14 @@ const Home = ({navigation}: Props) => {
     setHabitText('');
     setHabitList(existingHabitList);
     AsyncStorage.setItem('savedHabits', existingHabitList.toString());
+    let createdDate = Date.now();
+    let insertQuery = `INSERT INTO habits VALUES (1,'${habitText}',${createdDate},${createdDate})`;
+    console.log('executing query ' + insertQuery);
+    db.transaction(function (txn: any) {
+      txn.executeSql(insertQuery, [], function (tx: any, res: any) {
+        console.log('item:', res.rows.length);
+      });
+    });
   }
 
   function clearAllHabits() {
