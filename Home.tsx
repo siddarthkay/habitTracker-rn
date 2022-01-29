@@ -1,42 +1,26 @@
 // noinspection TypeScriptCheckImport
 
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect, useCallback } from "react";
 import {
   Text,
   SafeAreaView,
   TextInput,
   View,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import tw from 'twrnc';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from './types/RootStackParamList';
 
-import {openDatabase} from 'react-native-sqlite-storage';
+import { getHabitItems, getDBConnection, createTable } from "./dao";
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
-
-function errorCB(err: string) {
-  console.log('SQL Error: ' + err);
-}
-
-function openCB() {
-  console.log('Database OPENED');
-}
 
 const Home = ({navigation}: Props) => {
   const [habitText, setHabitText] = useState('');
   const [habitList, setHabitList] = useState([]);
-
-  const db = openDatabase(
-    'habitTracker.db',
-    '1.0',
-    'Test Database',
-    200000,
-    openCB,
-    errorCB,
-  );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
@@ -53,9 +37,19 @@ const Home = ({navigation}: Props) => {
     fetchHabitsFromStore();
   }, []);
 
-  useEffect(() => {
-
+  const loadDataCallback = useCallback(async () => {
+    try {
+      const db = await getDBConnection();
+      // await createTable(db);
+      await getHabitItems(db);
+    } catch (error) {
+      console.error(error);
+    }
   }, []);
+
+  useEffect(() => {
+    loadDataCallback();
+  }, [loadDataCallback]);
 
   function addHabitToList() {
     let existingHabitList = [...habitList];
@@ -63,15 +57,10 @@ const Home = ({navigation}: Props) => {
     existingHabitList.push(habitText);
     setHabitText('');
     setHabitList(existingHabitList);
-    AsyncStorage.setItem('savedHabits', existingHabitList.toString());
-    let createdDate = Date.now();
-    let insertQuery = `INSERT INTO habits VALUES (1,'${habitText}',${createdDate},${createdDate})`;
-    console.log('executing query ' + insertQuery);
-    db.transaction(function (txn: any) {
-      txn.executeSql(insertQuery, [], function (tx: any, res: any) {
-        console.log('item:', res.rows.length);
-      });
-    });
+    // AsyncStorage.setItem('savedHabits', existingHabitList.toString());
+    // let createdDate = Date.now();
+    // let insertQuery = `INSERT INTO habits VALUES (1,'${habitText}',${createdDate},${createdDate})`;
+    // console.log('executing query ' + insertQuery);
   }
 
   function clearAllHabits() {
