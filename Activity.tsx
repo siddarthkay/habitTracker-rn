@@ -7,8 +7,13 @@ import {
   View,
   TouchableOpacity,
 } from 'react-native';
-const Activity = ({route, navigation}) => {
-  const habitIndex = route.params.id;
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from './types/RootStackParamList';
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+const Activity = ({route, navigation}: Props) => {
+  const habitIndex = route?.params?.id;
   const [habitTitle, setHabitTitle] = useState('');
   const [habitLog, setHabitLog] = useState([]);
 

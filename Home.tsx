@@ -8,8 +8,12 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import tw from 'twrnc';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {RootStackParamList} from './types/RootStackParamList';
 
-const Home = ({navigation}) => {
+type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
+
+const Home = ({navigation}: Props) => {
   const [habitText, setHabitText] = useState('');
   const [habitList, setHabitList] = useState([]);
 
