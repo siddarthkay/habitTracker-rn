@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd12a04b-c0d3-4ea0-8bc1-67f7f60a1fe1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/Untitled1-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HabitTracker/ios/HabitTracker/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../HabitTracker/ios/HabitTracker/Images.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitBase.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitBase.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitBridgeRN-Bridging-Header.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitBridgeRN/SwiftVideo.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitManager.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitManager.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveKitView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveSpotRoom.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveSpotRoomUIView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/LiveVideoView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/Main.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/RemoteParticipantImpl.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LiveKitBridgeRN/ios/VideoViewComponent.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/Device/Device.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/Device/Device.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RCTCalendarModule.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RCTCalendarModule.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RNStripe-Bridging-Header.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RNStripe/Images.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RNStripe/Images.xcassets/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RNTStripeCardInputManager.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RNTStripeCardInputManager.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/RNTStripeCardInputView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/StripeBase.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RNStripe/ios/StripeReactNative/StripeBase.m" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="25dCP4NVOHR16BKePIwyslDl28x" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd12a04b-c0d3-4ea0-8bc1-67f7f60a1fe1" name="Changes" comment="" />
+      <created>1645847549398</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1645847549398</updated>
+      <workItem from="1645847550535" duration="60000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
